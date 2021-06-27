@@ -8,6 +8,14 @@
 
   background-color: rgba(35, 35, 116, 0.829);
   border-radius: 5px;
+
+  box-shadow: 4px 4px 10px #00000050;
+
+  transition: 0.5s;
+}
+
+.profile-card:hover {
+  box-shadow: 20px 20px 10px #00000050;
 }
 
 .card-header {
@@ -17,8 +25,24 @@
 }
 
 .card-header .header-icon {
-  width: 30px;
-  height: 30px;
+  display: grid;
+  place-items: center;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  transition: 0.3s linear;
+}
+
+.card-header .header-icon:hover {
+  background-color: darkgray;
+}
+
+.card-header .header-icon svg {
+  width: 25px;
+  height: 25px;
 }
 
 .card-body .main {
@@ -33,6 +57,14 @@
   border-radius: 50%;
 
   margin-bottom: 20px;
+
+  filter: brightness(90%);
+  transition: 0.5s;
+}
+
+.card-body .main .avatar:hover {
+  transform: scale(1.1);
+  filter: brightness(100%);
 }
 
 .card-body .main h1 {
@@ -61,6 +93,16 @@
 
   border-radius: 30px;
   background: linear-gradient(66deg, rgb(101 114 181) 0%, rgb(230 70 203) 100%);
+
+  box-shadow: 4px 4px 10px #00000050;
+
+  transition: 0.5s;
+}
+
+.card-body .main .button:hover {
+  filter: brightness(120%);
+
+  animation: swing 0.5s linear;
 }
 
 .card-body .social-media .icon-wrapper {
@@ -71,6 +113,13 @@
 
   background: linear-gradient(45deg, #1780ec 0%, #e492de 90%);
   border-radius: 50%;
+
+  transition: 0.5s;
+}
+
+.card-body .social-media .icon-wrapper:hover {
+  transform: rotate(-10deg);
+  filter: brightness(110%);
 }
 
 .card-body .social-media .icon-wrapper svg {
@@ -88,4 +137,19 @@
   font-size: 14px;
   font-weight: 100;
   color: lightgray;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
